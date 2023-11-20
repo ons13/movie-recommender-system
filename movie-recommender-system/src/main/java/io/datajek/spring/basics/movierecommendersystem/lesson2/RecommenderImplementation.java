@@ -5,7 +5,7 @@ public class RecommenderImplementation {
     //use filter interface to select filter
     private Filter filter;
 
-    public RecommenderImplementation(){
+    public RecommenderImplementation(CollaborativeFilter collaborativeFilter){
         super();
         this.filter=filter;
     }

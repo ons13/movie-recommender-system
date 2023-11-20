@@ -12,7 +12,7 @@ public class MovieRecommenderSystemApplication {
 		//SpringApplication.run(MovieRecommenderSystemApplication.class, args);
 
 		//create object of RecommenderImplementation class
-		RecommenderImplementation recommender = new RecommenderImplementation();
+		RecommenderImplementation recommender = new RecommenderImplementation(new CollaborativeFilter());
 
 		//call method to get recommendations
 		String[] result = recommender.recommendMovies("Finding Dory");
