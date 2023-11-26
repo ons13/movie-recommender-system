@@ -1,14 +1,8 @@
 package io.datajek.spring.basics.movierecommendersystem.lesson7;
 
-import io.datajek.spring.basics.movierecommendersystem.lesson2.Filter;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-
 @Component
-@Primary
-@Qualifier("CBF")
 public class ContentBasedFilter implements Filter{
 
     //getRecommendations takes a movie as input and returns a list of similar movies

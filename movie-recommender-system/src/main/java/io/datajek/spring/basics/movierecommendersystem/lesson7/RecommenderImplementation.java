@@ -5,14 +5,21 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-public class RecommenderImplementation (Filter filter){
+public class RecommenderImplementation {
 
-    @Autowired
-    @Qualifier("CF")
     private Filter filter;
 
+    //constructor injection
 
-    //use a filter to find recommendations
+    @Autowired
+    public RecommenderImplementation(@Qualifier("collaborativeFilter") Filter filter) {
+        super();
+        this.filter = filter;
+        System.out.println("Constructor invoked...");
+    }
+
+
+    //use the injected filter to find recommendations
     public String [] recommendMovies (String movie) {
 
         //print the name of interface implementation being used

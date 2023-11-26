@@ -4,12 +4,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+
 @Component
 public class RecommenderImplementation2 {
 
-    @Autowired
-    @Qualifier("CF")
     private Filter filter;
+
+    //setter injection
+    @Autowired
+    @Qualifier("contentBasedFilter")
+    public void setFilter(Filter filter) {
+        this.filter = filter;
+        System.out.println("Setter method invoked..");
+    }
 
 
     //use a filter to find recommendations
@@ -21,6 +28,4 @@ public class RecommenderImplementation2 {
         String[] results = filter.getRecommendations("Finding Dory");
 
         return results;
-    }
-
-}
+    }}
