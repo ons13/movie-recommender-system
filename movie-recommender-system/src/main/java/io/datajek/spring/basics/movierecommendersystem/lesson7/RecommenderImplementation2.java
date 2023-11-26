@@ -1,19 +1,16 @@
-package io.datajek.spring.basics.movierecommendersystem.lesson4;
+package io.datajek.spring.basics.movierecommendersystem.lesson7;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-public class RecommenderImplementation {
+public class RecommenderImplementation2 {
 
-    //Filter is a dependency of RecommenderImplementation
     @Autowired
+    @Qualifier("CF")
     private Filter filter;
 
-    public RecommenderImplementation(Filter filter) {
-        super();
-        this.filter = filter;
-    }
 
     //use a filter to find recommendations
     public String [] recommendMovies (String movie) {

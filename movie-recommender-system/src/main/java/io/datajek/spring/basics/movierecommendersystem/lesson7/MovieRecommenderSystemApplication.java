@@ -1,10 +1,10 @@
-package io.datajek.spring.basics.movierecommendersystem.lesson4;
-
-import java.util.Arrays;
+package io.datajek.spring.basics.movierecommendersystem.lesson7;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+
+import java.util.Arrays;
 
 @SpringBootApplication
 public class MovieRecommenderSystemApplication {
